@@ -7,14 +7,13 @@ const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.dev.js');
 const bodyParser = require('body-parser');
-// const db = require('./models');
+const db = require('./models');
 
 // Check to see what dev environment we are in
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json({extended:true}))
-app.use('/api/cards', cardApi);
 
 
 if (isDeveloping) {

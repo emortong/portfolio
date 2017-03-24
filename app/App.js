@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from './static/Header';
-import Page from './kanban/Page/Page';
+import Page from './components/Page/Page.js';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <Header/>
+      <div>
         <Page/>
       </div>
     )
